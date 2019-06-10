@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TGB-Rematrícula</title>
+    <link href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-8 offset-md-2 mt-5 " >
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-header bg-info text-white">
+                        <h3>Novo Curso</h3>
+                    </div>
+                    <form action="#" th:action="@{/addCurso}" th:object="${curso}" th:method="POST">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" th:field="*{nome}" id="nome" placeholder="Nome"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipoGraduacao">Curso</label>
+                            <select th:class="form-control" th:field="*{tipoGraduacao}" id="tipoGraduacao">
+                                <option th:value="Graduação" th:text="Graduação" ></option>
+                                <option th:value="Pós-Graduação" th:text="Pós-Graduação" ></option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-dark bg-info border-0">Adicionar</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <script src="/webjars/jquery/3.0.0/jquery.min.js"></script>
+        <script src="/webjars/popper.js/1.14.3/popper.min.js"></script>
+        <script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

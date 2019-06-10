@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TGB-Rematrícula</title>
+    <link href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-8 offset-md-2 mt-5 " >
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-header bg-info text-white">
+                        <h3>Editar Aluno</h3>
+                    </div>
+                    <form action="#" th:action="@{/updateAluno}" th:object="${aluno}" th:method="POST">
+                        <div class="form-group">
+                            <label for="matricula">Matrícula</label>
+                            <input type="text" class="form-control" th:field="*{matricula}" id="matricula" th:placeholder="${aluno.getMatricula()}"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" th:field="*{nome}" id="nome" th:placeholder="${aluno.getNome()}"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="curso">Curso</label>
+                            <select th:class="form-control" th:field="*{curso}">
+                                <option th:each="curso : ${cursos}"
+                                        th:value="${curso.getId()}"
+                                        th:text="${curso.getNome()}"
+                                        th:selected="(${aluno.curso} == ${curso.getId()})"
+                                        id="curso"></option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="semestre">Semestre</label>
+                            <input type="number" class="form-control" th:field="*{semestre}" id="semestre" th:placeholder="${aluno.getSemestre()}"/>
+                        </div>
+                        <input type="hidden" th:field="*{id}">
+                        <button type="submit" class="btn btn-dark bg-info border-0">Editar</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <script src="/webjars/jquery/3.0.0/jquery.min.js"></script>
+        <script src="/webjars/popper.js/1.14.3/popper.min.js"></script>
+        <script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
