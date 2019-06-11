@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" rel="stylesheet">
+    <link href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/webjars/font-awesome/5.7.2/css/all.css" rel="stylesheet">
 </head>
 <body>
-<h1 class="text-info"><a th:href="@{/listAlunos}">Alunos</a></h1>
+<h1 class="text-info"><a th:href="@{/listAlunos}"><i class="fas fa-edit"></i> Alunos</a></h1>
 <h1 class="text-info"><a th:href="@{/alunoForm}">Novo Aluno</a></h1>
 <h1 class="text-info"><a th:href="@{/listCursos}">Cursos</a></h1>
 <h1 class="text-info"><a th:href="@{/cursoForm}">Novo Curso</a></h1>

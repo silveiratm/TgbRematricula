@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>TGB-Rematrícula</title>
-    <link href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" rel="stylesheet">
+    <link href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/webjars/font-awesome/5.7.2/css/all.css" rel="stylesheet">
 </head>
 <body>
     <div class="row">
@@ -32,10 +33,10 @@
                                     th:text="${curso.getNome()}"></td>
                                 <td th:text="${aluno.getSemestre()}"></td>
                                 <td>
-                                    <a th:href="@{/editAluno/{id}(id=${aluno.getId()})}">Editar</a>
+                                    <a th:href="@{/editAluno/{id}(id=${aluno.getId()})}"><i class="fas fa-edit"></i></a>
                                 </td>
                                 <td>
-                                    <a th:href="@{/deleteAluno/{id}(id=${aluno.getId()})}">Deletar</a>
+                                    <a th:href="@{/deleteAluno/{id}(id=${aluno.getId()})}"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                             </tr>
                         </tbody>
