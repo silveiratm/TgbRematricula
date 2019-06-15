@@ -6,18 +6,134 @@
     <title>Title</title>
     <link href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="/webjars/font-awesome/5.7.2/css/all.css" rel="stylesheet">
+
+    <style>
+        .footer-copyright{
+            color: #555;
+            background: #060606;
+            border-top: 4px solid #060606;
+            margin-top: 40px;
+            padding: 30px 0 10px;
+        }
+
+
+    </style>
 </head>
 <body>
-<h1 class="text-info"><a th:href="@{/listAlunos}"><i class="fas fa-edit"></i> Alunos</a></h1>
+<!--h1 class="text-info"><a th:href="@{/listAlunos}"><i class="fas fa-edit"></i> Alunos</a></h1>
 <h1 class="text-info"><a th:href="@{/alunoForm}">Novo Aluno</a></h1>
-<h1 class="text-info"><a th:href="@{/listCursos}">Cursos</a></h1>
+<h1 class="text-info"><a th:href="@{/listCursos}"><i class="fas fa-edit"></i>Cursos</a></h1>
 <h1 class="text-info"><a th:href="@{/cursoForm}">Novo Curso</a></h1>
-<h1 class="text-info"><a th:href="@{/listDisciplinas}">Disciplinas</a></h1>
+<h1 class="text-info"><a th:href="@{/listDisciplinas}"><i class="fas fa-edit"></i>Disciplinas</a></h1>
 <h1 class="text-info"><a th:href="@{/disciplinaForm}">Nova Disciplina</a></h1>
-<h1 class="text-info"><a th:href="@{/listHistoricos}">Históricos</a></h1>
+<h1 class="text-info"><a th:href="@{/listHistoricos}"><i class="fas fa-edit"></i>Históricos</a></h1-->
 
-    <script src="/webjars/jquery/3.0.0/jquery.min.js"></script>
-    <script src="/webjars/popper.js/1.14.3/popper.min.js"></script>
-    <script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!--INICIO CABEÇALHO -->
+<header>
+    <nav class="navbar navbar-dark bg-dark">
+        <ul class="nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                   aria-expanded="false">Adicionar</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" th:href="@{/alunoForm}"><i class="far fa-plus-square"></i> Aluno</a>
+                    <a class="dropdown-item" th:href="@{/cursoForm}"><i class="far fa-plus-square"></i> Curso</a>
+                    <a class="dropdown-item" th:href="@{/disciplinaForm}"><i class="far fa-plus-square"></i> Disciplina</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                   aria-expanded="false">Editar/Deletar</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" th:href="@{/listAlunos}"><i class="fas fa-edit"></i> Alunos</a>
+                    <a class="dropdown-item" th:href="@{/listCursos}"><i class="fas fa-edit"></i> Cursos</a>
+                    <a class="dropdown-item" th:href="@{/listDisciplinas}"><i class="fas fa-edit"></i> Disciplinas</a>
+                    <a class="dropdown-item" th:href="@{/listHistoricos}"><i class="fas fa-edit"></i> Históricos</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Recomendações</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<!--FIM CABEÇALHO -->
+
+<!--INICIO CONTEÚDO -->
+<main role="main" id="conteudo">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-4">
+                ¯\_(ツ)_/¯
+            </div>
+            <div class="col-lg-4">
+                ¯\_(ツ)_/¯
+            </div>
+            <div class="col-lg-4">
+                ¯\_(ツ)_/¯
+            </div>
+        </div>
+        <hr/>
+
+        <div class="row">
+            <div class="col-lg-9">
+                <p class="lead text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis augue arcu,
+                    ultricies in placerat non, blandit et mauris. Integer vel ipsum pharetra, ornare turpis ut, ultrices
+                    nunc. Sed ante justo, bibendum nec tortor eget, tempus blandit arcu. Nulla vulputate, elit in tempor
+                    laoreet, sem lectus accumsan ligula, imperdiet sodales arcu libero congue justo. Aliquam erat
+                    volutpat.
+                    Fusce fringilla libero maximus, consequat enim sit amet, eleifend risus. Sed ut vehicula lorem.
+                    Morbi
+                    aliquam at metus sed accumsan. Curabitur aliquam non ipsum quis egestas. Donec convallis aliquet
+                    libero
+                    quis auctor. Quisque egestas ex vitae dictum interdum. Donec ac egestas velit. Nullam congue sem
+                    sem,
+                    quis facilisis felis vehicula et.</p>
+            </div>
+            <div class="col-lg-3">
+                <aside class="sidebar" id="sidebar" data-plugin-sticky=""
+                       data-plugin-options="{'minWidth': 991, 'containerSelector': '.container', 'padding': {'top': 110}}"
+                       style="width: 255px;">
+
+                    <h4 class="heading-primary">Conheça mais...</h4>
+                    <br>
+                    <a href="#" title="Lourem Ipsum">Lourem Ipsum</a>
+                    <hr>
+                    <a href="#" title="Lourem Ipsum">Lourem Ipsum</a>
+                    <hr>
+                    <a href="#" title="Lourem Ipsum">Lourem Ipsum</a>
+                    <hr>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</main>
+<!--FIM CABEÇALHO -->
+
+<!--INICIO RODAPÉ -->
+<footer id="rodape">
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <a href="#" class="logo">
+                        <img alt="" class="img-fluid" src="">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <p>© Copyright 2019. Todos os direitos reservados.</p>
+                    <p>Desenvolvido por Pessoas</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--FIM RODAPÉ -->
+
+
+<script src="/webjars/jquery/3.0.0/jquery.min.js"></script>
+<script src="/webjars/popper.js/1.14.3/popper.min.js"></script>
+<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
